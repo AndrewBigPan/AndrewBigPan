@@ -102,7 +102,7 @@
 <meta property="og:description" content="windows和linux平台下用C/C++处理中文字符的知识点记录。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2018/10/12/5bc03f0951d75.png">
-<meta property="og:updated_time" content="2018-10-12T06:34:40.000Z">
+<meta property="og:updated_time" content="2018-10-12T06:58:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C&#x2F;C++中文的编码和字符串处理">
 <meta name="twitter:description" content="windows和linux平台下用C/C++处理中文字符的知识点记录。">
@@ -442,7 +442,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://i.loli.net/2018/10/12/5bc03f0951d75.png" rel="gallery_cjn5n63510001vx9ka5f2vgxq"
+                 href="https://i.loli.net/2018/10/12/5bc03f0951d75.png" rel="gallery_cjn5nvpqr0003dz9k5izauylw"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.loli.net/2018/10/12/5bc03f0951d75.png" itemprop="contentUrl"/>
               </a>
@@ -485,6 +485,7 @@
 </tbody>
 </table>
 <p>&emsp;&emsp;如上所示，UTF8中的‘x’就是实际表示字符编码的位。表示的最大值就是全1的情况，最小值就是少一个字节的情况下最大值加1，因为少一个字节已经可以存的下的字符，不会用多一个字节来保存。由上可知，UTF8可以直接用char类型的字符串来表示，只是用对应的解释方式来解释就可以正确显示了。<br><br>&emsp;&emsp;另外一种就是<a href="https://en.wikipedia.org/wiki/GBK" target="_blank" rel="noopener">GBK</a>等编码方式。这一类编码方式和UNICODE没有任何关系，是另一种字符集和编码方式的规定。使用方法可以类比于UTF8，在编码小于128时，就是ASCII，而中文的编码均大于128，用超过一个字节来表示。在平时编写的windows程序中，可以理解为如果使用了UNICODE宏，就是在用wchar_t来表示中文，使用UTF16编码，如果没有UNICODE宏，那么就是在用GBK，以char来表示中文。<br><br>&emsp;&emsp;windows平台下的TCHAR类型就是通过宏对char和wchar_t的封装。可根据当前平台情况选择对应的类型。_T修饰的字符串常量同理，根据是否定义的UNICODE宏，分别表示””或L””。<br><br>&emsp;&emsp;Linux平台的不同在于，wchar_t用4个字节表示，也就是UCS-4，而windows用两个字节，UCS-2。<br></p>
+<p>参考：<br><a href="http://www.cnblogs.com/KevinYang/archive/2010/06/18/1760597.html" target="_blank" rel="noopener">http://www.cnblogs.com/KevinYang/archive/2010/06/18/1760597.html</a><br><a href="http://blog.csdn.net/shellching/article/details/5316442" target="_blank" rel="noopener">http://blog.csdn.net/shellching/article/details/5316442</a></p>
 
       
     </div>
@@ -509,7 +510,7 @@
   <ul class="post-copyright">
     <li class="post-copyright-author">
       <strong>本文作者：</strong>
-      Andrew Pan
+      AndrewPan
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
@@ -693,7 +694,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Andrew Pan</span>
+  <span class="author" itemprop="copyrightHolder">AndrewPan</span>
 </div>
 
 
@@ -831,7 +832,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "search.xml";
+    var search_path = "";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
