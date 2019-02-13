@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -105,7 +105,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     motion: true,
@@ -356,9 +356,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/10/12/markdown知识点记录/" itemprop="url">
+            <a class="post-title-link" href="/2018/10/12/C中文的编码和字符串处理/" itemprop="url">
               
-                <span itemprop="name">markdown知识点记录</span>
+                <span itemprop="name">C/C++中文的编码和字符串处理</span>
               
             </a>
         
@@ -366,7 +366,7 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-12T12:45:44+08:00"
+              datetime="2018-10-12T15:03:50+08:00"
               content="2018-10-12" >
           10-12
         </time>
@@ -393,9 +393,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/10/11/C中文的编码和字符串处理/" itemprop="url">
+            <a class="post-title-link" href="/2018/10/12/markdown知识点记录/" itemprop="url">
               
-                <span itemprop="name">C/C++中文的编码和字符串处理</span>
+                <span itemprop="name">markdown知识点记录</span>
               
             </a>
         
@@ -403,9 +403,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-11T23:14:13+08:00"
-              content="2018-10-11" >
-          10-11
+              datetime="2018-10-12T12:45:44+08:00"
+              content="2018-10-12" >
+          10-12
         </time>
       </div>
 
@@ -538,11 +538,11 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">AndrewPan</span>
+  <span class="author" itemprop="copyrightHolder">Andrew Pan</span>
 </div>
 
 
@@ -553,7 +553,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -633,6 +633,13 @@
   
   
 
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
   
   
     <script type="text/javascript" id="motion.page.archive">
@@ -682,7 +689,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
@@ -884,7 +891,7 @@
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('5');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1132,5 +1139,9 @@
 
   
 
+  <div class="bg_content">
+        <canvas id="canvas"></canvas>
+  </div>
 </body>
 </html>
+<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>
